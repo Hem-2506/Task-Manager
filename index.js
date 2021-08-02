@@ -34,7 +34,9 @@ cards.map((cardObject) => {
 
   // Update our global store
   globalStore.push(cardObject);
+
 });
+localStorage.setItem("tasky",JSON.stringify({cards:globalStore}));
 };
 
 const saveChanges = () => {
@@ -158,3 +160,7 @@ const editCard = (event) =>{
       submitButton.removeAttribute("onclick");
       submitButton.innerHTML ="Open Task";
   };
+
+  const openCard = (event) => {
+
+  }
